@@ -1,6 +1,6 @@
 <?php	
 	//Connect to Postgres Database
-	$dbh = pg_connect("host=XXX.XXX.X.XXX dbname=covid_data user=XXXX password=XXXX");
+	$dbh = pg_connect("host=localhost dbname=covid2 user=pi password=password");
 	if(!$dbh) {
 		die("Error:" . pg_last_error());
 	}
@@ -120,7 +120,7 @@
 	</script>
 	</head>
 	<body>
-		<h1 class="center"> Covid! </h1>
+		<h1 class="center"> COVID Status around the world </h1>
 		<h5 class="center"> Click a red country to get more Data about it!</h5>
 		<div id="chartdiv"></div>
 		<div id="legenddiv"></div>
